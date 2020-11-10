@@ -41,39 +41,74 @@ body {
 .container {
   width: 100%;
   height: 100%;
+  font-family: 'Roboto';
 }
 
 header.structure>section {
-  background: #FFFF00;
-  height: 200px;
+  background: #FFF;
+  color: #FFF;
+  font-weight: bold;
+  height: 350px;
   position: relative;
 }
 
-.title {
-  background: white;
-  width: 500px;
-  height:100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#header-bg {
+  background-image: url('../img/01-header.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
 }
 
-header.structure>.menu {
-  background: red;
+.title {
+  width: 500px;
+}
+
+.title>img {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.title>div {
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 5px 5px 10px #000;
+}
+
+
+.menu {
+  background: #504741;
   width: 100%;
   height: 50px;
   text-align: center;
   line-height: 50px;
 }
 
+.menu a {
+  color: #B7C8C6;
+  text-decoration: none;
+}
+
 ul {
   list-style-type: none;
+  display: inline-block;
 }
 
 .menu>ul>li {
-  display: inline-block;
-  padding: 0 12px;
+  float: left;
+  padding: 0 16px;
+}
+
+.menu>ul>li:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.menu>ul>li:hover a {
+  color: #FFF;
+}
+
+.menu>ul>li:not(:last-child) {
+  border-right: groove #808080;
 }
 
 .side {
