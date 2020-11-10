@@ -5,25 +5,21 @@
 }
 
 body {
-  background: url('../img/00-bg.jpg');
+  background-image: url('../img/00-bg.jpg');
+  font-family: 'Roboto';
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Utility CSS */
-
 .float {
   float: left;
 }
 
-.structure {
-  width: 1200px;
-  margin: 15px auto;
-}
-
-.box {
-  background: #FFF;
-  border: solid 1px #FFF;
-  border-radius: 5px;
-  padding: 15px;
+.inline {
+  display: inline-block;
 }
 
 .transform {
@@ -38,16 +34,14 @@ body {
   content: '';
   display: table;
 }
-
 /* / Utility CSS */
 
-.container {
-  width: 100%;
-  height: 100%;
-  font-family: 'Roboto';
+.structure {
+  width: 1200px;
+  margin: 15px auto;
 }
 
-header.structure>section {
+.title {
   height: 350px;
   border: 20px solid #FFF;
   color: #FFF;
@@ -58,12 +52,8 @@ header.structure>section {
   background-position: center;
 }
 
-.title {
-  width: 500px;
-}
-
-.title>img {
-  width: 80%;
+.title>.transform>img {
+  width: 75%;
   display: block;
   margin: auto;
 }
@@ -84,46 +74,42 @@ header.structure>section {
 
 .menu a {
   color: #B7C8C6;
-  text-decoration: none;
 }
 
-ul {
-  list-style-type: none;
-  display: inline-block;
-}
-
-.menu>ul>li {
+.menu>.inline>li {
   float: left;
+  list-style-type: none;
   padding: 0 16px;
 }
 
-.menu>ul>li:hover {
+.menu>.inline>li:hover {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.menu>ul>li:hover a {
+.menu>.inline>li:hover a {
   color: #FFF;
 }
 
-.menu>ul>li:not(:last-child) {
+.menu>.inline>li:not(:last-child) {
   border-right: groove #808080;
+}
+
+.box {
+  background: #FFF;
+  border: solid 1px #FFF;
+  border-radius: 5px;
+  padding: 15px;
 }
 
 .side {
   width: 25%;
 }
 
-.side:nth-child(1) {
+.side:first-child {
   height: 400px;
 }
 
-.box-title {
-  color: #504741;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.side>.box {
+.side:last-child>.box {
   height: 250px;
   margin-bottom: 25px;
 }
@@ -137,6 +123,34 @@ ul {
     height: 600px;
   }
 
+.box-title {
+  color: #504741;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.rss>.inline:first-child {
+  width: 10%;
+  vertical-align: middle;
+}
+
+.rss img {
+  width: 100%;
+}
+
+.feedlist {
+  list-style-type: none;
+}
+
+.feedlist a {
+  font-weight: bold;
+  color: #29AB1B;
+}
+.feedlist>li {
+  margin: 15px 5px;
+}
+
 footer.structure>section {
   height: 150px;
   text-align: center;
@@ -146,10 +160,14 @@ footer.structure>section {
   padding: 10px;
   height: 30%;
   border-bottom: 1px solid #000;
+  margin-bottom: 15px;
 }
 
 .social {
   height: 70%;
+}
+
+.social>.float {
   position: relative;
 }
 
