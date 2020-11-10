@@ -14,9 +14,26 @@ body {
   float: left;
 }
 
-.content {
+.structure {
   width: 1200px;
   margin: 15px auto;
+}
+
+.content {
+  padding: 15px;
+}
+
+.transform {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clean:after {
+  clear: both;
+  content: '';
+  display: table;
 }
 
 /* / Utility CSS */
@@ -26,34 +43,37 @@ body {
   height: 100%;
 }
 
-header.content>section {
+header.structure>section {
   background: #FFFF00;
-  width: 1200px;
   height: 200px;
   position: relative;
 }
 
 .title {
   background: white;
-  width: 250px;
-  height:125px;
+  width: 500px;
+  height:100px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-header.content>nav {
+header.structure>.menu {
   background: red;
   width: 100%;
   height: 50px;
+  text-align: center;
+  line-height: 50px;
 }
 
+ul {
+  list-style-type: none;
+}
 
-main.content:after {
-  clear: both;
-  content: '';
-  display: table;
+.menu>ul>li {
+  display: inline-block;
+  padding: 0 12px;
 }
 
 .side {
@@ -62,8 +82,8 @@ main.content:after {
 
 .side:nth-child(1) {
   height: 400px;
-
 }
+
 .side:nth-child(1), .side>.box {
   background-color: #D391E3;
 }
@@ -86,8 +106,26 @@ main.content:after {
     height: 100%;
 }
 
-footer.content>section {
+footer.structure>section {
   background: #ADD8E6;
   width: 100%;
   height: 150px;
+  text-align: center;
+}
+
+.credits {
+  padding: 10px;
+  height: 30%;
+  border-bottom: 1px solid #000;
+}
+
+.social {
+  height: 70%;
+  position: relative;
+}
+
+.social>.float {
+  width: calc(100% / 3);
+  height: 100%;
+  position: relative;
 }
