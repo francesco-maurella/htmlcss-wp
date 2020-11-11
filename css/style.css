@@ -116,7 +116,6 @@ a {
 }
 
 .side:last-child>.box {
-  height: 250px;
   margin-bottom: 25px;
 }
 
@@ -124,10 +123,6 @@ a {
   width: 50%;
   padding: 0 15px;
 }
-
-.float.center>.box {
-    height: 600px;
-  }
 
 .box .title {
   color: #504741;
